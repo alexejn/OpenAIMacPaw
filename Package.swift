@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-    name: "OpenAI",
+    name: "OpenAIMacPaw",
     platforms: [.macOS(.v10_15), .iOS(.v13), .tvOS(.v13), .watchOS(.v6), .visionOS(.v1)],
     products: [
         .library(
-            name: "OpenAI",
-            targets: ["OpenAI"]
+            name: "OpenAIMacPaw",
+            targets: ["OpenAIMacPaw"]
         ),
     ],
     dependencies: [
@@ -17,13 +17,13 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "OpenAI",
+            name: "OpenAIMacPaw",
             dependencies: [
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime")
             ]
         ),
         .testTarget(
-            name: "OpenAITests",
-            dependencies: ["OpenAI"])
+            name: "OpenAIMacPawTests",
+            dependencies: ["OpenAIMacPaw"])
     ]
 )
