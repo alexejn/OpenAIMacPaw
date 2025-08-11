@@ -18,10 +18,10 @@ let package = Package(
     targets: [
         .target(
             name: "OpenAIMacPaw",
-            path: "Sources/OpenAI",
             dependencies: [
                 .product(name: "OpenAPIRuntime", package: "swift-openapi-runtime")
-            ]
+            ],
+            path: "Sources/OpenAI"
         ),
         .testTarget(
             name: "OpenAIMacPawTests",
